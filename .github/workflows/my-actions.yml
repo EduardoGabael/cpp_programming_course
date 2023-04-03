@@ -11,6 +11,4 @@ jobs:
       runs-on: ubuntu-latest
       steps:
         - run: echo "Hello, GitHub actions!"
-
-    needs: [say-hello]
     
