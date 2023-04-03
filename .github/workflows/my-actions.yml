@@ -31,4 +31,4 @@ jobs:
       - name: Build
         working-directory: ${{github.workspace}}
         shell: bash 
-        run:   mkdir build && cd build && cmake ..
+        run:   mkdir build && cd build && cmake .. && make && ls
