@@ -25,10 +25,10 @@ jobs:
       - name: Configure CMake
 
         shell: bash
-        working-directory: ${{github.workspace}}/build
+        working-directory: ${{github.workspace}}/cpp_programming_course/build
         run: cmake $GITHUB_WORKSPACE -DCMAKE_BUILD_TYPE=$BUILD_TYPE
 
       - name: Build
-        working-directory: ${{github.workspace}}/build
+        working-directory: ${{github.workspace}}/cpp_programming_course/build
         shell: bash 
         run:   cmake --build . --config $BUILD_TYPE
