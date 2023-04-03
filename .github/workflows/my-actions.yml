@@ -16,8 +16,16 @@ jobs:
     build-and-test:
       runs-on: ubuntu-latest
       steps: 
-        - uses: actions/checkout@v3
-        - name: configure
-      run: mkdir build && cd build && cmake .. -G "Unix Makefiles"
+      - uses: actions/checkout@v3
+
+      - name: Create build environmet
+
+        run: cmake -E make_directory ${{github.workspace}}/build
+
+      - name: Configure CMake
+
+        shell: bash
+        working-directory: ${{github.workspace}}/build
+        run: cmake $GITHUB_WORKSPACE -DCMAKE_BUILD_TYPE=$BUILD_TYPE
 
     
