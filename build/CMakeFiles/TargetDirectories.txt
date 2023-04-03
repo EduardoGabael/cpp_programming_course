@@ -1,3 +1,0 @@
-C:/Users/eduar/OneDrive/Documents/cpp_programming_course/build/CMakeFiles/executable.dir
-C:/Users/eduar/OneDrive/Documents/cpp_programming_course/build/CMakeFiles/edit_cache.dir
-C:/Users/eduar/OneDrive/Documents/cpp_programming_course/build/CMakeFiles/rebuild_cache.dir
