@@ -20,7 +20,6 @@ jobs:
         with:
           repository: ${{github.repository}}
       - name: Build & Test
-        
         with:
           build-dir: ${{ runner.workspace }}/build
           # will set the CC & CXX for cmake
