@@ -18,7 +18,7 @@ jobs:
     - name: mkdir
       run: mkdir build
     - name: cmake build
-      run: cd build && cmake .. -G "Unix Makefiles" && make --target all
+      run: cd build && cmake .. -G "Unix Makefiles" && make -B
 
 
 
