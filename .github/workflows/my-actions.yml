@@ -23,7 +23,7 @@ jobs:
       run: build/test/unit_test1
   windows_test:
     runs-on: windows-latest
-      steps: 
+    steps: 
       - uses: actions/checkout@v3
       - name: testing bat file
         run: ./build.bat
