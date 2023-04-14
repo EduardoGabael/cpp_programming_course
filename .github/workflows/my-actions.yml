@@ -9,24 +9,26 @@ on:
     branches: [master]
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
-    - name: boost
-      run: sudo apt-get update && sudo apt-get install
-    - name: build
-      run: mkdir build && cd build && cmake .. -G "Unix Makefiles" && make -B
-    - name: run executable
-      run: build/executable
-    - name: run unit test
-      run: build/test/unit_test1
+  # build:
+    # runs-on: ubuntu-latest
+    # steps:
+    # - uses: actions/checkout@v3
+    # - name: boost
+    #   run: sudo apt-get update && sudo apt-get install
+    # - name: build
+    #   run: mkdir build && cd build && cmake .. -G "Unix Makefiles" && make -B
+    # - name: run executable
+    #   run: build/executable
+    # - name: run unit test
+    #   run: build/test/unit_test1
   windows_test:
     runs-on: windows-latest
     steps: 
       - uses: actions/checkout@v3
       - name: testing bat file
-        run: ./build.bat
+        run: ./build.bat test
+      - name: executing 
+        run: ./build.bat run
 
 
 
