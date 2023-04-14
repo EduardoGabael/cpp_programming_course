@@ -22,7 +22,7 @@ jobs:
     - name: run executable
       run: build/executable
     - name:
-      run: build/unit_test1
+      run: build/test/unit_test1
 
 
 
