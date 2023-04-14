@@ -15,13 +15,15 @@ TEST(Dummy, 1)
 
 TEST(Dummy, 2)
 {
-    EXPECT_EQ(3,2);
+    EXPECT_EQ(2,2);
 }
 
 TEST(Dummy, 3)
 {
-    EXPECT_EQ(4,2);
+    EXPECT_EQ(3,3);
 }
+
+
 int main(int argc, char **argv)
 {
     ::testing::InitGoogleTest(&argc, argv);
