@@ -21,7 +21,7 @@ jobs:
       run: cd build && cmake .. -G "Unix Makefiles" && make -B
     - name: run executable
       run: build/executable
-    - name:
+    - name: run unit test
       run: build/test/unit_test1
 
 
