@@ -1,10 +1,11 @@
 @echo off 
 @echo off 
 
-if %1% NEQ ""(
-    if %1% == test  goto test 
-    if %1% == run   goto run 
-) else(
+if %1% NEQ "" (
+    if %1%==test  goto test 
+    if %1%==run   goto run 
+    goto error
+) else (
     goto error
 )
 
@@ -19,3 +20,6 @@ if %1% NEQ ""(
         ./executable
 :exit
         echo "Done!"
+
+:error
+        echo "Please provide a valid target name"
