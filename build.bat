@@ -19,7 +19,7 @@ if %1% NEQ "" (
         cd build
         .\executable.exe
         cd test
-        .\ unit_test1.exe
+        .\unit_test1.exe
         goto exit
 :exit
         echo "Done!"
