@@ -16,8 +16,9 @@ if %1% NEQ "" (
         make
         goto exit
 :run 
-        cd build 
-        ./executable
+        cd build
+        .\executable.exe
+        goto exit
 :exit
         echo "Done!"
 
