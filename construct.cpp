@@ -14,8 +14,7 @@ class User
             return status;
         }
 
-    cout << "Hola mundo inmundo"
-    uint8_t numero1=get_number();
+   
 
 };
 
@@ -26,6 +25,8 @@ int main()
     me.last_name = "Beltran";
 
     std::cout<<"Status: "<<me.get_status()<<std::endl;
+    std::cout << "Hola mundo inmundo"
+    uint8_t numero1=get_number();
 
     return 0;
 }
