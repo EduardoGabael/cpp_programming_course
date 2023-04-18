@@ -14,6 +14,8 @@ class User
             return status;
         }
 
+    cout << "Hola mundo inmundo"
+
 };
 
 int main()
