@@ -15,6 +15,7 @@ class User
         }
 
     cout << "Hola mundo inmundo"
+    uint8_t numero1=get_number();
 
 };
 
