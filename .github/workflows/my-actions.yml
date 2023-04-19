@@ -13,7 +13,13 @@ jobs:
   windows_test:
     runs-on: windows-latest
     steps: 
-      - uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Set up GCC
+        uses: egor-tensin/setup-gcc@v1
+        with:
+           version: latest
+           platform: x64
       - name: testing bat file
         run: ./build.bat test
       - name: executing 
