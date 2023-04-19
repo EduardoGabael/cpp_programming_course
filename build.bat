@@ -1,5 +1,4 @@
 @echo off 
-@echo off 
 
 if %1% NEQ "" (
     if %1%==test  goto test 
