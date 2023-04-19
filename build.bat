@@ -13,7 +13,12 @@ if %1% NEQ "" (
         mkdir build
         cd build
         cmake .. -Wno-dev -G "Unix Makefiles"
-        make
+        make && (
+              echo Compilation Succeded
+        )||(
+              echo Compilation Failed
+              exit 1
+        ) 
         goto exit
 :run 
         cd build

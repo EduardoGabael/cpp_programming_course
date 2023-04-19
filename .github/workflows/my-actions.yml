@@ -15,7 +15,7 @@ jobs:
     steps: 
       - uses: actions/checkout@v3
       - name: testing bat file
-        run: mkdir build && cd build && cmake .. -Wno-dev -G "Unix Makefiles" && make
+        run: ./build.bat test
       - name: executing 
         run: ./build.bat run
 
