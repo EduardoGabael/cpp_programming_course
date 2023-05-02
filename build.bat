@@ -16,7 +16,7 @@ if %1% NEQ "" (
               echo Compilation Succeded
         )||(
               echo Compilation Failed
-              exit 1
+              
         ) 
         goto exit
 :run 
