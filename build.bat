@@ -11,7 +11,7 @@ if %1% NEQ "" (
 :test
         mkdir build
         cd build
-        cmake .. -Wno-dev -G "Unix Makefiles"
+        cmake .. -Wno-dev -Werror -G "Unix Makefiles"
         make && (
               echo Compilation Succeded
         )||(
