@@ -16,7 +16,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: testing bat file
-        run: ./build.bat test
+        run: cmake .. -Wno-dev -Werror -G "Unix Makefiles" && make
       - name: executing 
         run: ./build.bat run
 
