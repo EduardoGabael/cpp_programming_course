@@ -20,7 +20,7 @@ TEST(Dummy, 2)
 
 TEST(Dummy, 3)
 {
-    EXPECT_EQ()
+    EXPECT_EQ(2,3);
 }
 
 
