@@ -22,7 +22,7 @@ if %1% NEQ "" (
 :run 
         cd build
         cd test
-        .\unit_test1.exe
+        ./unit_test1.exe
         goto exit
 :exit
         echo "Done!"
