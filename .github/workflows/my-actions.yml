@@ -18,7 +18,7 @@ jobs:
       - name: Testing bat file
         run: mkdir build && cd build && cmake .. -Wno-dev -Werror -G "Unix Makefiles" && make
       - name: Running images
-        run: cd build && cd test && ls
+        run: cd build && cd test && .\unit_test1
 
 
 
