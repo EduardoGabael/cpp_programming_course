@@ -15,8 +15,10 @@ jobs:
     steps: 
       - name: Checkout
         uses: actions/checkout@v3
-      - name: testing bat file
+      - name: Testing bat file
         run: mkdir build && cd build && cmake .. -Wno-dev -Werror -G "Unix Makefiles" && make
+      - name: Running images
+        run: cd build && cd test && ls
 
 
 
