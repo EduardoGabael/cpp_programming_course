@@ -16,9 +16,16 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Testing bat file
-        run: mkdir build && cd build && cmake .. -Wno-dev -Werror -G "Unix Makefiles" && make
+        run: |
+           mkdir build 
+           cd build 
+           cmake .. -Wno-dev -Werror -G "Unix Makefiles" 
+           cmake --build .
       - name: Running images
-        run: cd build && cd test && ./unit_test1
+        run: |
+           cd build
+           cd test 
+           ./unit_test1
 
 
 
