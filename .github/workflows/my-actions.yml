@@ -25,7 +25,7 @@ jobs:
         run: |
            cd build
            cd test 
-           make test
+           ctest
 
 
 
