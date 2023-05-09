@@ -18,5 +18,8 @@ if(NOT googletest_POPULATED)
 endif()
 
 set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
+#Enable testing
+
+enable_testing()
 
 add_executable(executable construct.cpp)

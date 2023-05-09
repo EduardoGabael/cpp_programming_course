@@ -8,3 +8,6 @@ set(UTEST_LIBRARIES
 
 add_executable(unit_test1 test.cpp)
 target_link_libraries(unit_test1 ${UTEST_LIBRARIES})
+
+
+add_test(UnitTest unit_test1 )
