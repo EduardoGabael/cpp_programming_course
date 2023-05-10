@@ -12,7 +12,7 @@ if %1% NEQ "" (
         mkdir build
         cd build
         cmake .. -Wno-dev -Werror -G "Unix Makefiles"
-        cmake --build .
+        cmake --build . --parallel &(nproc)
         goto exit
 :run 
         cd build
