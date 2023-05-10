@@ -20,7 +20,7 @@ jobs:
           mkdir build
           cd build
           cmake .. 
-          cmake --build . --parallel &(nproc)
+          cmake --build . --parallel &(noproc)
       - name: Running images
         run: |
           cd build
