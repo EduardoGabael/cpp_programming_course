@@ -2,10 +2,6 @@ cmake_minimum_required(VERSION 3.24.0)
 
 project(lalonchera LANGUAGES C CXX ASM)
 
-enable_testing()
-
-add_subdirectory(test)
-
 include(FetchContent)
 
 FetchContent_Declare(googletest
@@ -22,6 +18,8 @@ endif()
 set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 #Enable testing
 
+enable_testing()
 
+add_subdirectory(test)
 
 add_executable(executable construct.cpp)

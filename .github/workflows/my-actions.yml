@@ -11,22 +11,16 @@ on:
 jobs:
 
   windows_test:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps: 
       - name: Checkout
         uses: actions/checkout@v3
       - name: Testing bat file
         run: |
-           mkdir build 
-           cd build 
-           cmake .. -Wno-dev -Werror -G "Unix Makefiles" 
-           cmake --build .
+           build.bat test
       - name: Running images
         run: |
-           cd build
-           cd test 
-           ctest --verbose
-
+           build.bat run
 
 
 

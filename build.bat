@@ -12,18 +12,11 @@ if %1% NEQ "" (
         mkdir build
         cd build
         cmake .. -Wno-dev -Werror -G "Unix Makefiles"
-        make && (
-              echo Compilation Succeded
-        )||(
-              echo Compilation Failed
-              
-        ) 
+        cmake --build .
         goto exit
 :run 
         cd build
-        .\executable.exe
-        cd test
-        .\unit_test1.exe
+        ctest -VV 
         goto exit
 :exit
         echo "Done!"
