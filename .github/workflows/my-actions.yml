@@ -18,9 +18,6 @@ jobs:
       - name: Testing bat file
         run: |
            .\build.bat test
-      
-      - name: Run unit tests
-        uses: HorstBaerbel/action-ctest@1.1
       - name: Running images
         run: |
            .\build.bat run
