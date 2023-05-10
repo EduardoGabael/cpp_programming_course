@@ -24,7 +24,7 @@ jobs:
       - name: Running images
         run: |
           cd build
-          ctest --output-on-failure --parallel $(nonproc)
+          ctest -VV
 
 
 
