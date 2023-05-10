@@ -11,16 +11,17 @@ on:
 jobs:
 
   windows_test:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps: 
       - name: Checkout
         uses: actions/checkout@v3
       - name: Testing bat file
         run: |
-           .\build.bat test
+          cmake .. 
+          cmake --build . --parallel &(nproc)
       - name: Running images
         run: |
-           .\build.bat run
+           ctest --output-on-failure --parallel $(noproc)
 
 
 
