@@ -17,10 +17,10 @@ jobs:
         uses: actions/checkout@v3
       - name: Testing bat file
         run: |
-           build.bat test
+           .\build.bat test
       - name: Running images
         run: |
-           build.bat run
+           .\build.bat run
 
 
 
