@@ -8,7 +8,7 @@ on:
 
 jobs:
 
-  ubuntu_test:
+  windows_test:
     runs-on: windows-latest
     steps: 
       - name: Checkout
@@ -20,4 +20,5 @@ jobs:
         
         working-directory: build
         run: |
+          cd build
           ctest --output-on-failure 
