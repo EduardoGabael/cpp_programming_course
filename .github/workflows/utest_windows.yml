@@ -20,4 +20,4 @@ jobs:
         
         working-directory: build
         run: |
-          ctest -VV
+          ctest --output-on-failure 
