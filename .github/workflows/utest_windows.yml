@@ -18,6 +18,6 @@ jobs:
           .\build.bat test
       - name: Running images
         
-        
+        working-directory: build
         run: |
-          .\build.bat run
+          ctest --output-on-failure --parallel $(nproc)
