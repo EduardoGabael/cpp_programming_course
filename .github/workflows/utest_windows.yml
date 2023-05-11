@@ -19,4 +19,4 @@ jobs:
       - name: Running images
         
         run: |
-          ctest -VV
+          ctest --verbose
