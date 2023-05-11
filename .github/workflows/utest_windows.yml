@@ -1,5 +1,5 @@
 # Name of your workflow
-name: Unit Test Linux
+name: Unit Test Windows
 
 #Define the trigger event(s)
 on: 
@@ -9,7 +9,7 @@ on:
 jobs:
 
   ubuntu_test:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps: 
       - name: Checkout
         uses: actions/checkout@v3
