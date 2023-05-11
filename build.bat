@@ -16,7 +16,7 @@ if %1% NEQ "" (
         goto exit
 :run 
         cd build
-        ctest -VV 
+        ctest --output-on-failure --parallel $(nproc)
         goto exit
 :exit
         echo "Done!"
