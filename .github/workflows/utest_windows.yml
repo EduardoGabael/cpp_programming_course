@@ -19,4 +19,5 @@ jobs:
       - name: Running images
         
         run: |
+          cd build
           ctest --verbose
