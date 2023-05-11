@@ -18,7 +18,6 @@ jobs:
           .\build.bat test
       - name: Running images
         
-        working-directory: build
         run: |
           cd build
           ctest -VV
