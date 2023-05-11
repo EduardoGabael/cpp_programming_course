@@ -18,11 +18,12 @@ jobs:
           mkdir build
           cd build
           cmake .. 
-          cmake --build . --parallel $(nonproc)
+          cmake --build . --parallel $(nproc)
       - name: Running images
+        
+        working-directory: build
         run: |
-          cd build
-          ctest -VV 
+          ctest --output-on-failure --parallel $(nproc)
 
 
 
