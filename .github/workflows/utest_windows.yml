@@ -20,4 +20,4 @@ jobs:
         
         working-directory: build
         run: |
-          ctest --output-on-failure --parallel $(nproc)
+          ctest -VV
