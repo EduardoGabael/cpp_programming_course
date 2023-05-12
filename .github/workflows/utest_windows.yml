@@ -22,6 +22,5 @@ jobs:
       - name: Running images
         working-directory: ${{ github.workspace }}/build
         run: |
-          cd test
-          ls
+          ctest -VV -C Debug
           
