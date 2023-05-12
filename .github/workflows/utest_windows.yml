@@ -9,13 +9,14 @@ on:
 jobs:
 
   windows_test:
-    runs-on: windows-2019
+    runs-on: windows-2022
     steps: 
       - name: Checkout
         uses: actions/checkout@v3
       - name: Testing bat file
         shell: bash
         run: |
+         cmake --version
          mkdir build
          cd build
          cmake .. -Wno-dev -Werror -G "Unix Makefiles"
