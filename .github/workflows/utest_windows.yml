@@ -23,4 +23,4 @@ jobs:
         working-directory: ${{ github.workspace }}/build
         run: |
           cd test
-          ./unit_test1.exe
+          .\unit_test1.exe
