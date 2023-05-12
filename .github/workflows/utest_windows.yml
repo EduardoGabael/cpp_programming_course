@@ -20,6 +20,6 @@ jobs:
          cmake .. -Wno-dev -Werror -G "Unix Makefiles"
          cmake --build . --parallel 
       - name: Running images
-        working-directory: build
+        working-directory: ${{ github.workspace }}
         run: |
           ctest -V
