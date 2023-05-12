@@ -22,4 +22,5 @@ jobs:
       - name: Running images
         working-directory: ${{ github.workspace }}/build
         run: |
-          ctest --output-on-failure
+          cd test
+          ./unit_test1.exe
