@@ -20,7 +20,6 @@ jobs:
       - name: Testing bat file
         shell: bash
         run: |
-         cmake --version
          mkdir build
          cd build
          cmake .. -Wno-dev -Werror -G "Unix Makefiles"
