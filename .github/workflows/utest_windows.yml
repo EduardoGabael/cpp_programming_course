@@ -21,7 +21,6 @@ jobs:
          cmake .. -G "Unix Makefiles"  -DBUILD_SHARED_LIBS=ON
          cmake --build . --parallel 
       - name: Running images
-        working-directory: ${{ github.workspace }}/build
         run: |
           ls
           ctest -N
