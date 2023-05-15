@@ -16,11 +16,6 @@ jobs:
       - name: Config CTest
         uses: HorstBaerbel/action-ctest@1.1
         # These are optional (defaults displayed)
-        with:
-        sourcedir: '.'
-        builddir: 'build'
-        cmakeoptions: '--config Release'
-        ctestoptions: ''
       - name: Testing bat file
         shell: bash
         run: |
