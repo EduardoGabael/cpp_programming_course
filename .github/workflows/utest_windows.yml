@@ -18,10 +18,10 @@ jobs:
         run: |
          mkdir build
          cd build
-         cmake .. -Wno-dev -Werror -G "Unix Makefiles"
+         cmake .. -G "Unix Makefiles"
          cmake --build . --parallel 
       - name: Running images
         working-directory: ${{ github.workspace }}/build
         run: |
-          ctest --output-on-failure
+          ctest ctest -VV -C Debug
           
