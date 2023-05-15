@@ -25,5 +25,5 @@ jobs:
         run: |
           ls
           ctest -N
-          ctest -VV -C Debug
+          ctest --output-on-failure --test-dir ./build/bin
           
