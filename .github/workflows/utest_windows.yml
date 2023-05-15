@@ -21,7 +21,6 @@ jobs:
          cmake .. -G "Unix Makefiles"
          cmake --build . --parallel 
       - name: Running images
-        working-directory: ${{ github.workspace }}/build
         run: |
-          ctest ctest -VV -C Debug
+          ctest -VV -C Debug
           
