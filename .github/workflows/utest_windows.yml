@@ -20,7 +20,7 @@ jobs:
         run: |
          mkdir build
          cd build
-         cmake .. -G "Unix Makefiles"
+         cmake .. -G "NMake Makefiles"
          cmake --build . --parallel 
       - name: Running images
         run: |
