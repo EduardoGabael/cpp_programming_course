@@ -21,9 +21,7 @@ jobs:
          cmake .. -G "Unix Makefiles"
          cmake --build . --parallel 
       - name: Running images
+        working-directory: ./build
         run: |
-          ls
-          pwd
-          ctest -N
-          ctest --output-on-failure --test-dir ./build
+          ctest -j$(nproc) --build-config Release
           
