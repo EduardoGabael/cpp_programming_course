@@ -24,4 +24,5 @@ jobs:
         working-directory: ./build
         run: |
           ctest -j$(nproc) --rerun-failed --output-on-failure
+          dir test
           
