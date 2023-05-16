@@ -23,5 +23,5 @@ jobs:
       - name: Running images
         working-directory: ./build
         run: |
-          ctest -j$(nproc) --build-config Release
+          ctest -j$(nproc) --build-config
           
