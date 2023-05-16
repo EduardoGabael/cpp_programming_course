@@ -9,7 +9,7 @@ on:
 jobs:
 
   windows_test:
-    runs-on: windows-2019
+    runs-on: windows-latest
     steps: 
       - name: Checkout
         uses: actions/checkout@v3
@@ -25,5 +25,5 @@ jobs:
           ls
           pwd
           ctest -N
-          ctest --output-on-failure --test-dir ./build
+          ctest --output-on-failure --test-dir ./cpp_programming_course/build
           
