@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.26.0)
+cmake_minimum_required(VERSION 3.24.0)
 
 project(lalonchera LANGUAGES C CXX ASM)
 

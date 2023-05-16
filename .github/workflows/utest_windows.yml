@@ -23,6 +23,7 @@ jobs:
       - name: Running images
         run: |
           ls
+          pwd
           ctest -N
           ctest --output-on-failure --test-dir ./build
           
