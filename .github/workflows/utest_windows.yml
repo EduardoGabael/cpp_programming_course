@@ -25,5 +25,5 @@ jobs:
           ls
           pwd
           ctest -N
-          ctest --output-on-failure --test-dir ./cpp_programming_course/build
+          ctest --output-on-failure --test-dir ./build
           
