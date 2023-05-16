@@ -23,5 +23,5 @@ jobs:
       - name: Running images
         working-directory: ./build
         run: |
-          ctest -j$(nproc) --build-config
+          ctest -j$(nproc) --rerun-failed --output-on-failure
           
