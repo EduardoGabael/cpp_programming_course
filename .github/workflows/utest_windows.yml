@@ -20,9 +20,5 @@ jobs:
          cd build
          cmake .. -G "Unix Makefiles"
          cmake --build . --parallel 
-      - name: Running images
-        working-directory: ./build
-        run: |
-          ctest -j$(nproc) --rerun-failed --output-on-failure
-          dir test
+         ctest --output-on-failure --parallel 
           
