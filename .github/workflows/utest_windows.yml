@@ -20,5 +20,5 @@ jobs:
          cd build
          cmake .. -G "Unix Makefiles"
          cmake --build . --parallel 
-         ctest --output-on-failure --parallel 
+         ctest --VV --parallel 
           
