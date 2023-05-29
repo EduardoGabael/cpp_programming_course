@@ -9,12 +9,10 @@ on:
 jobs:
 
   windows_test:
-    runs-on: windows-latest
+    runs-on: windows-2019
     steps: 
       - name: Checkout
         uses: actions/checkout@v3
-      - name: cmake swiss army knife
-        uses: lpenz/ghaction-cmake@v0.21.1
       - name: Testing bat file
         shell: pwsh
         run: |
