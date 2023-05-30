@@ -9,10 +9,14 @@ on:
 jobs:
 
   windows_test:
-    runs-on: windows-2019
+    runs-on: windows-latest
     steps: 
       - name: Checkout
         uses: actions/checkout@v3
+      - name: Setup .NET Core SDK ${{ matrix.dotnet-version }}
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: ${{ matrix.dotnet-version }}
       - name: Testing bat file
         shell: pwsh
         run: |
