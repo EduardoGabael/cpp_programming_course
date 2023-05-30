@@ -13,10 +13,13 @@ jobs:
     steps: 
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Setup .NET Core SDK ${{ matrix.dotnet-version }}
-        uses: actions/setup-dotnet@v3
-        with:
-          dotnet-version: ${{ matrix.dotnet-version }}
+        
+      - name: Get latest CMake
+        uses: lukka/get-cmake@latest
+
+      - name: Run vcpkg
+        uses: lukka/run-vcpkg@v10
+
       - name: Testing bat file
         shell: pwsh
         run: |
