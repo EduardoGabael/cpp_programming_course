@@ -8,24 +8,37 @@ on:
 
 jobs:
 
-  windows_test:
+  windows:
+    name: ${{matrix.family}}-${{matrix.compiler}}-${{matrix.buildtype}}
     runs-on: windows-latest
-    steps: 
-      - name: Checkout
-        uses: actions/checkout@v3
-        
+    environment: CI
+    strategy:
+      fail-fast: false
+      matrix:
+        name: [windows-msvc] # , windows-msvc-clang-cl
+        buildtype: [debug, release]
+        include:
+          - name: windows-msvc
+            family: windows
+            compiler: msvc
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          submodules: true
+
+      - uses: ilammy/msvc-dev-cmd@v1
+
       - name: Get latest CMake
         uses: lukka/get-cmake@latest
 
       - name: Run vcpkg
         uses: lukka/run-vcpkg@v10
-
-      - name: Testing bat file
-        shell: pwsh
+        with:
+          appendedCacheKey: ${{matrix.name}}${{matrix.buildtype}}
         run: |
          mkdir build
          cd build
-         cmake .. -G "Unix Makefiles"
+         cmake .. 
          cmake --build . --parallel 
          ctest --VV --parallel 
           
