@@ -27,4 +27,4 @@ jobs:
          cd build
          cmake .. -G "Unix Makefiles"
          cmake --build . --parallel 
-         ctest --verbose 
+         ctest --version 
