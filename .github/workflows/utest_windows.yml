@@ -22,6 +22,6 @@ jobs:
          mkdir build
          cd build
          cmake .. -G "Unix Makefiles"
-         cmake --build . --parallel 
-         ctest --output-on-failure
+         cmake --build . --parallel -j4
+         ctest --output-on-failure --parallel -j4
       
