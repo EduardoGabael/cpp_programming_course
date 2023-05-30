@@ -18,12 +18,12 @@ jobs:
 
       - name: Set up MinGW
         uses: egor-tensin/setup-mingw@v2
-        
+
       - name: Testing bat file
         run: |
          mkdir build
          cd build
          cmake .. -G "Unix Makefiles"
          cmake --build . --parallel 
-         ctest --verbose
+         ctest --output-on-failure
       
