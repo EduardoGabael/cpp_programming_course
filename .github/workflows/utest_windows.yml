@@ -17,7 +17,6 @@ jobs:
          submodules: true
       - name: Set up MinGW
         uses: egor-tensin/setup-mingw@84c781b557efd538dec66bde06988d81cd3138cf # v2.2.0
-         version: '12.2.0'
       - name: Testing bat file
         run: |
          mkdir build
